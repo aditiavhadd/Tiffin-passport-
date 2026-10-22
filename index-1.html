@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiffin Passport – Mumbai's Tiffin Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--sf:#fff;--ink:#1f2a22;--mu:#667066;--ln:#e5e2d9;--ac:#4a6e4b;--aci:#fff;--sl:#e8efe6;--or:#fcefdc;--ortx:#a05a10;--vg:#3b8a52;--nv:#b3402a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14181500;--bg:#151a16;--sf:#1e251f;--ink:#eef2ec;--mu:#a2ada2;--ln:#323b33;--ac:#6fa070;--aci:#0f1a10;--sl:#2a352b;--or:#3a2d18;--ortx:#f0b970;--vg:#62c27f;--nv:#e57c63;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151a16;--sf:#1e251f;--ink:#eef2ec;--mu:#a2ada2;--ln:#323b33;--ac:#6fa070;--aci:#0f1a10;--sl:#2a352b;--or:#3a2d18;--ortx:#f0b970;--vg:#62c27f;--nv:#e57c63;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:84px}
+.w{max-width:1120px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--ln);z-index:5}
+nav .w{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.logo{font-size:1.3rem;font-weight:600;letter-spacing:-.03em}.logo span{color:var(--ac)}
+nav .l{display:flex;gap:20px}nav a,nav button.lk{color:var(--ink);text-decoration:none;font-size:.93rem;background:none;border:0;font:inherit;font-size:.93rem;cursor:pointer;padding:0}
+.pill{background:var(--sl);color:var(--ac);border-radius:999px;padding:5px 12px;font-size:.78rem;font-weight:600}
+.ey{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);font-weight:600;margin:0}
+h1{font-size:clamp(2.4rem,7vw,4rem);line-height:1;letter-spacing:-.05em;margin:14px 0;font-weight:700}h1 span{color:var(--ac);display:block}
+h2{font-size:1.9rem;letter-spacing:-.03em;margin:0 0 4px}h3{margin:0;font-size:1.1rem}
+.hero{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));padding:48px 0 36px;align-items:center}
+.mu{color:var(--mu)}.sm{font-size:.82rem}
+.box{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:22px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.dec{list-style:none;margin:14px 0;padding:0}.dec li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;font-size:.95rem}.dec b{font-weight:500;text-align:right}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+select,input,.btn{font:inherit}
+select,input{padding:11px 12px;border:1px solid var(--ln);border-radius:12px;background:var(--sf);color:var(--ink);min-width:0}
+.btn{background:var(--ac);color:var(--aci);border:0;border-radius:12px;padding:11px 18px;font-weight:600;cursor:pointer}
+.btn.s{background:var(--sl);color:var(--ac)}.btn.o{background:var(--sf);color:var(--ink);border:1px solid var(--ln)}.btn.o.on{border-color:var(--ac);background:var(--sl);color:var(--ac)}
+.btn.full{width:100%;display:block;text-align:center;text-decoration:none;margin-top:12px}
+section{padding:36px 0}
+.fh{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.fb{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));padding:14px;border:1px solid var(--ln);background:var(--sf);border-radius:18px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.chip{border:1px solid var(--ln);background:var(--sf);color:var(--ink);border-radius:999px;padding:8px 16px;font:inherit;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--sl);border-color:var(--ac);color:var(--ac);font-weight:600}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:20px;align-items:start}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:18px;box-shadow:0 4px 16px rgba(0,0,0,.04)}
+.top{display:flex;justify-content:space-between;gap:8px;font-size:.85rem}.top .bd{background:var(--sl);color:var(--ac);border-radius:999px;padding:3px 10px;font-size:.72rem;font-weight:600;letter-spacing:.05em;height:fit-content}
+.top .rt{text-align:right;font-weight:600}
+.card h3{margin:8px 0 2px}.loc{font-size:.78rem;color:var(--mu)}
+.pr{font-size:1.7rem;font-weight:700;letter-spacing:-.03em;margin:14px 0 8px}
+.tg{display:flex;gap:6px;flex-wrap:wrap}.tg span{background:var(--sl);border-radius:8px;padding:3px 9px;font-size:.76rem;color:var(--mu)}.tg span.nl{background:var(--or);color:var(--ortx)}
+dl{margin:14px 0 0;padding-top:10px;border-top:1px solid var(--ln);font-size:.9rem}dl div{display:flex;justify-content:space-between;gap:10px;padding:3px 0}dt{color:var(--mu)}dd{margin:0;text-align:right}
+.acts{display:flex;gap:8px;margin-top:14px}.acts .btn{padding:10px 14px;font-size:.92rem}
+.empty{text-align:center;padding:40px 16px}
+.how{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:16px}.how .card h3{margin-bottom:10px}
+footer{border-top:1px solid var(--ln);padding:22px 0;color:var(--mu);font-size:.82rem}
+#tray{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));background:#1d2620;color:#fff;border-radius:18px;padding:10px 12px;display:none;align-items:center;gap:10px;width:calc(100% - 28px);max-width:900px;z-index:8}
+#tray.on{display:flex}#tray .cs{display:flex;gap:6px;flex-wrap:wrap;flex:1}#tray .cs span{background:#33433a;border-radius:8px;padding:4px 10px;font-size:.78rem}#tray .btn{background:#e8efe6;color:#1d2620;white-space:nowrap}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:20;padding:14px}.ov.on{display:flex}
+.md{background:var(--sf);width:100%;max-width:720px;max-height:92%;overflow:auto;border-radius:22px;padding:22px}
+.md .x{float:right;width:34px;height:34px;border-radius:50%;border:0;background:var(--sl);color:var(--ink);font-size:1.1rem;cursor:pointer}
+.tw{overflow-x:auto;margin:14px 0}table{border-collapse:collapse;width:100%;min-width:520px}th,td{padding:10px 8px;text-align:left;vertical-align:top;border-bottom:1px solid var(--ln);font-size:.9rem}thead th{background:var(--sl)}
+.fl{display:block;font-weight:600;margin:14px 0 4px;font-size:.92rem}.md select,.md input{width:100%}
+.note{background:var(--bg);border:1px solid var(--ln);border-radius:12px;padding:12px;margin-top:14px;font-size:.9rem}
+.days{display:flex;gap:6px;overflow-x:auto;margin:10px 0}.days .chip{padding:6px 14px;flex:0 0 auto;font-size:.88rem}
+.menu{border-left:4px solid var(--vg);background:var(--sl);border-radius:0 12px 12px 0;padding:10px 14px}.menu.nv{border-left-color:var(--nv)}.menu ul{margin:4px 0 0;padding-left:20px}
+.opt{display:flex;align-items:center;gap:10px;border:1px solid var(--ln);border-radius:12px;padding:9px 12px;margin-top:8px;cursor:pointer}.opt:has(input:checked){border-color:var(--ac);background:var(--sl)}.opt input{width:auto;accent-color:var(--ac)}.opt .n{flex:1}.opt small{display:block;color:var(--mu)}
+.tot{display:flex;justify-content:space-between;align-items:center;margin:14px 0;font-size:1.05rem}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+
+/* ===== Lively theme: saffron, chilli pink, mango ===== */
+:root{--bg:#fff7ec;--sf:#fff;--ink:#2b1d2e;--mu:#7a6670;--ln:#f3dfc9;--ac:#d9480f;--aci:#fff;--sl:#ffeadb;--or:#fff0bf;--ortx:#8a5a00;--vg:#2f9e44;--nv:#d6336c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1220;--sf:#2a1b2e;--ink:#fff1e6;--mu:#c9b0bd;--ln:#46324d;--ac:#ff8a3d;--aci:#2a1200;--sl:#3b2542;--or:#4a3512;--ortx:#ffd079;--vg:#69db7c;--nv:#ff8fab}}
+:root[data-theme="dark"]{--bg:#1b1220;--sf:#2a1b2e;--ink:#fff1e6;--mu:#c9b0bd;--ln:#46324d;--ac:#ff8a3d;--aci:#2a1200;--sl:#3b2542;--or:#4a3512;--ortx:#ffd079;--vg:#69db7c;--nv:#ff8fab}
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;background:radial-gradient(circle at 15% 20%,rgba(247,103,7,.18),transparent 40%),radial-gradient(circle at 85% 15%,rgba(214,51,108,.15),transparent 38%),radial-gradient(circle at 70% 85%,rgba(245,159,0,.18),transparent 40%);animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(3%,-3%) rotate(6deg) scale(1.05)}}
+h1,h2,.logo{font-family:"Baloo 2",system-ui,sans-serif}h1{letter-spacing:-.02em;line-height:1.02}h2{letter-spacing:-.01em}
+nav{background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+nav::after{content:"";position:absolute;left:0;bottom:-1px;height:3px;width:100%;background:linear-gradient(90deg,#f76707,#d6336c,#f59f00);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+.logo::before{content:"🍱 ";display:inline-block;transition:transform .3s}.logo:hover::before{transform:rotate(-20deg) scale(1.2)}
+.logo span{background:linear-gradient(90deg,#f76707,#d6336c);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav .l a,nav .l button{position:relative}
+nav .l a::after,nav .l button::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;background:var(--ac);transform:scaleX(0);transition:transform .25s}
+nav .l a:hover::after,nav .l button:hover::after{transform:scaleX(1)}
+.pill{background:linear-gradient(135deg,var(--sl),var(--or))}#cnt.pop{animation:bump .45s}@keyframes bump{40%{transform:scale(1.25) rotate(-3deg)}}
+h1 span{background:linear-gradient(90deg,#f76707,#d6336c,#f59f00,#f76707);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:300% 0}}
+.hero{position:relative}.hero>div{position:relative;z-index:1}
+.fe{position:absolute;z-index:0;opacity:.4;pointer-events:none;animation:flt 7s ease-in-out infinite}
+@keyframes flt{50%{transform:translateY(-16px) rotate(10deg)}}
+.hero .box{border:2px solid transparent;background:linear-gradient(var(--sf),var(--sf)) padding-box,linear-gradient(135deg,#f76707,#d6336c,#f59f00) border-box;transform:perspective(800px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s}
+.dec li{border-radius:10px;padding:6px 8px;transition:background .2s,transform .2s}.dec li:hover{background:var(--sl);transform:translateX(5px)}
+.btn{position:relative;overflow:hidden;background:linear-gradient(135deg,#f76707,#d6336c);color:#fff;box-shadow:0 8px 20px -8px rgba(214,51,108,.75);transition:transform .15s,box-shadow .2s,filter .2s}
+.btn:hover{transform:translateY(-2px);filter:saturate(1.15);box-shadow:0 12px 24px -8px rgba(214,51,108,.8)}.btn:active{transform:scale(.96)}
+.btn.s,.btn.o{box-shadow:none}.btn.s:hover,.btn.o:hover{box-shadow:0 6px 16px -8px rgba(0,0,0,.4)}
+.rp{position:absolute;border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);animation:rp .6s ease-out forwards;pointer-events:none}@keyframes rp{to{transform:scale(1);opacity:0}}
+select,input{transition:border-color .2s,box-shadow .2s}select:hover,input:hover{border-color:var(--ac)}select:focus,input:focus{box-shadow:0 0 0 4px color-mix(in srgb,var(--ac) 25%,transparent)}
+.chip{transition:transform .15s,border-color .2s,background .2s}.chip:hover{transform:translateY(-2px);border-color:var(--ac)}.chip:active{transform:scale(.93)}
+.chip[aria-pressed=true]{background:linear-gradient(135deg,#f76707,#d6336c);border-color:transparent;color:#fff;box-shadow:0 6px 16px -6px rgba(214,51,108,.7)}
+.mq{overflow:hidden;white-space:nowrap;border-radius:999px;background:linear-gradient(90deg,#f76707,#d6336c,#f59f00);color:#fff;padding:10px 0;margin:6px 0 10px;font-weight:600;transform:rotate(-.8deg);box-shadow:0 10px 24px -12px rgba(214,51,108,.8)}
+.mq-t{display:inline-block;animation:mq 30s linear infinite}.mq:hover .mq-t{animation-play-state:paused}.mq-t span{display:inline-block;padding:0 14px}@keyframes mq{to{transform:translateX(-50%)}}
+.grid .card{position:relative;overflow:hidden;transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .2s,box-shadow .25s;animation:pop .5s cubic-bezier(.2,.8,.3,1) backwards}
+.grid .card:nth-child(3n+2){animation-delay:.07s}.grid .card:nth-child(3n){animation-delay:.14s}
+@keyframes pop{from{opacity:0;transform:translateY(26px) scale(.95)}}
+.grid .card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--cg,linear-gradient(90deg,#f76707,#f59f00))}
+.grid .card:nth-child(4n+2){--cg:linear-gradient(90deg,#d6336c,#ff8a5c)}.grid .card:nth-child(4n+3){--cg:linear-gradient(90deg,#2f9e44,#a9e34b)}.grid .card:nth-child(4n){--cg:linear-gradient(90deg,#7048e8,#e64980)}
+.grid .card:hover{transform:perspective(700px) translateY(-6px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));box-shadow:0 22px 40px -18px rgba(214,51,108,.45)}
+.pr{background:linear-gradient(90deg,#f76707,#d6336c);-webkit-background-clip:text;background-clip:text;color:transparent;width:fit-content}
+.tg span.spc{font-weight:600}.s-Verymild,.s-Mild{background:rgba(47,158,68,.18)!important;color:var(--vg)!important}.s-Medium{background:rgba(245,159,0,.22)!important;color:var(--ortx)!important}.s-Spicy,.s-Veryspicy{background:rgba(230,73,128,.18)!important;color:var(--nv)!important}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}.how .card.in:hover{transform:translateY(-6px) rotate(-.6deg);transition-duration:.2s}
+#tray{background:linear-gradient(135deg,#2b1d2e,#5a1d44)}#tray.on{animation:tup .4s cubic-bezier(.2,.9,.3,1.2)}@keyframes tup{from{transform:translate(-50%,40px);opacity:0}}
+.ov{-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}.ov.on{animation:fd .2s}.ov.on .md{animation:mp .35s cubic-bezier(.2,.9,.3,1.2)}@keyframes fd{from{opacity:0}}@keyframes mp{from{transform:scale(.9) translateY(24px);opacity:0}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+/* ===== Custom plate builder ===== */
+.grp{margin-top:16px}.grp>b{display:block;font-size:.95rem}
+.it{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--ln)}.it .n{flex:1}.it small{display:block;color:var(--mu)}
+.st{display:flex;align-items:center;gap:10px}.st button{width:34px;height:34px;border-radius:50%;border:1px solid var(--ln);background:var(--sf);color:var(--ink);font-size:1.15rem;line-height:1;cursor:pointer;padding:0}.st button:hover{border-color:var(--ac)}.st>span{min-width:18px;text-align:center;font-weight:700}
+.wk{display:flex;align-items:center;gap:10px;margin-top:8px}.wk b{width:40px}.wk select{flex:1}
+.sv{display:flex;align-items:center;gap:8px;border:1px solid var(--ln);border-radius:12px;padding:9px 12px;margin-top:8px}.sv .n{flex:1}.sv small{display:block;color:var(--mu)}.sv .btn{padding:8px 12px;font-size:.85rem}
+.grid .card .btn.full{margin-top:10px}
+</style>
+</head>
+<body>
+<nav><div class="w"><span class="logo">Tiffin <span>Passport</span></span><div class="l"><a href="#find">Find Tiffin</a><button class="lk" id="navC">Compare</button><a href="#how">How it works</a></div><span class="pill">Mumbai • 2026</span></div></nav>
+<main class="w">
+<div class="hero">
+<div><p class="ey">Mumbai's tiffin discovery layer</p><h1>Don't subscribe blind.<span>Taste. Compare. Decide.</span></h1>
+<p class="mu" style="max-width:46ch">Find home-style tiffins by your exact area, compare price, quantity, delivery, menu style and <b>spice level</b>, then try one meal before committing.</p>
+<div class="row"><select id="hero" aria-label="Select your area" style="flex:1;min-width:180px"></select><button class="btn" id="go">Find my tiffin →</button><button class="btn s" id="sur" type="button">🎲 Surprise me</button></div>
+<p class="mu sm">No lock-in. No hidden assumptions. Comparison first.</p></div>
+<div class="box"><p class="ey">Your decision, simplified</p><h3 style="font-size:1.4rem;margin-top:8px">What should I compare?</h3><ul class="dec">
+<li><span>💰 Price / meal</span><b>₹85–₹150+</b></li><li><span>🌶️ Spice level</span><b>Very mild → Very spicy</b></li><li><span>🍱 Portion</span><b>Small → Large</b></li><li><span>🚚 Delivery window</span><b>Shown clearly</b></li><li><span>⭐ Student feedback</span><b>Multi-factor</b></li></ul>
+<a class="btn s full" href="#how">See how Tiffin Passport works</a></div>
+</div>
+
+<div class="mq" aria-hidden="true"><div class="mq-t"><span>🍛 Dal tadka ✦</span><span>🫓 Phulka ✦</span><span>🥘 Rajma chawal ✦</span><span>🌶️ Spice your way ✦</span><span>🍚 Khichdi ✦</span><span>🥗 Fresh salad ✦</span><span>🍋 Home-style ✦</span><span>🍱 Try before you subscribe ✦</span><span>🍛 Dal tadka ✦</span><span>🫓 Phulka ✦</span><span>🥘 Rajma chawal ✦</span><span>🌶️ Spice your way ✦</span><span>🍚 Khichdi ✦</span><span>🥗 Fresh salad ✦</span><span>🍋 Home-style ✦</span><span>🍱 Try before you subscribe ✦</span></div></div>
+<section id="find"><div class="fh"><div><h2>Find your tiffin</h2><p class="mu" style="margin:0">Start with your city/region, then narrow down by neighbourhood and food preference.</p></div><span class="pill" id="cnt" aria-live="polite"></span></div>
+<div class="fb"><select id="rg" aria-label="Region"></select><select id="ar" aria-label="Area"></select>
+<select id="meal" aria-label="Meal"><option>Meal: Any</option><option>Lunch</option><option>Dinner</option><option>Both</option></select>
+<select id="food" aria-label="Food"><option>Food: Any</option><option>Vegetarian</option><option>Non-vegetarian</option><option>Both</option></select>
+<select id="bud" aria-label="Budget"><option value="0">Budget: Any</option><option value="100">Up to ₹100</option><option value="125">Up to ₹125</option><option value="150">Up to ₹150</option></select></div>
+<div class="chips" id="sp"></div><div class="chips" id="tg"></div>
+<div class="grid" id="res"></div></section>
+
+<section id="how"><h2>Why this is different</h2><p class="mu" style="margin:0">The prototype addresses the practical failure points we found in the market.</p>
+<div class="how"><div class="card"><h3>01 — Area-first</h3><p class="mu">Service coverage is local. Users choose city/region and neighbourhood before seeing recommendations.</p></div>
+<div class="card"><h3>02 — Compare apples-to-apples</h3><p class="mu">Price, portion, spice, menu rotation, delivery and subscription flexibility are shown in one structure.</p></div>
+<div class="card"><h3>03 — Trial before commitment</h3><p class="mu">A one-meal trial reduces the risk of paying for a monthly plan before knowing the actual experience.</p></div></div></section>
+</main>
+<footer><div class="w">Prototype data uses publicly visible/current Mumbai-area service listings as examples. Prices, menus, delivery areas and availability can change and should be verified with the provider before an actual order.</div></footer>
+<div id="tray"><b>Compare</b><div class="cs" id="trc"></div><button class="btn" id="cn">Compare now</button></div>
+<div class="ov" id="ov" role="dialog" aria-modal="true"><div class="md" id="md"></div></div>
+
+<script>
+const $=i=>document.getElementById(i);
+const RG=["Mumbai Island & Central","Western Mumbai","Eastern Mumbai","Navi Mumbai","Thane & Central Suburbs","MMR — Other"];
+const AR=[["South Mumbai","Dadar","Parel","Lower Parel","Matunga","Wadala","Chembur","Sion","Byculla","Worli","Cuffe Parade","Mumbai Central","Charni Road"],["Bandra","Khar","Santacruz","Vile Parle","Andheri West","Andheri East","Jogeshwari","Goregaon","Malad","Kandivali","Borivali"],["Powai","Chandivali","Saki Naka","Ghatkopar","Vikhroli","Mulund"],["Vashi","Nerul","Belapur","Seawoods","Kharghar","Panvel"],["Thane","Kalwa","Dombivli","Kalyan","Bhiwandi","Badlapur"],["Mira Road","Bhayandar","Vasai","Virar"]];
+const regOf=a=>RG[AR.findIndex(x=>x.includes(a))];
+const D=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+const PL=[{n:"Budget-friendly and healthy",nv:[],m:[["Rajma chawal","Cucumber salad"],["Roti","Moong dal","Cabbage sabzi","Rice"],["Roti","Soya matar curry","Rice"],["Chole rice","Salad"],["Roti","Masoor dal","Seasonal vegetable","Rice"],["Vegetable noodles","Vegetable Manchurian"],["Roti","Dal makhani","Jeera rice"]]},
+{n:"Regional and variety",nv:[3],m:[["Roti","Aloo gobi","Dal","Rice"],["Sambar rice","Vegetable poriyal"],["Dal khichdi","Papad","Curd"],["Roti","Egg bhurji","Rice"],["Vegetable pulao","Raita","Boiled chana"],["Roti","Sev tamatar sabzi","Dal","Rice"],["Paneer pulao","Raita"]]},
+{n:"Special and protein-rich",nv:[2,4,5,6],m:[["Chole","Roti","Jeera rice"],["Vegetable fried rice","Chilli paneer"],["Chicken curry","Roti","Rice"],["Paneer bhurji","Roti","Salad"],["Chicken pulao","Raita"],["Egg curry","Roti","Rice"],["Chicken biryani","Salad"]]}];
+const PK=[["3-compartment bagasse (sugarcane fibre) box","Compostable",10],["3-compartment food-grade PP plastic box","Standard",0],["Reusable stainless-steel tiffin box","Reusable",30],["Kraft-paper takeaway meal box","Food-safe lining",8],["Aluminium takeaway tray","Secure lid",5]];
+const W="Western Mumbai",E="Eastern Mumbai",I="Mumbai Island & Central",T="Thane & Central Suburbs",L=["Lunch"],H=["Home-style"],NL=["No lock-in"];
+const p=(n,loc,reg,cov,pr,sp,po,tags,del,menu,plan,rt,rv,food,meals,best,m)=>({n,loc,reg,cov,pr,sp,po,tags,del,menu,plan,rt,rv,food,meals,best:best||"Local provider in "+loc.split(",").pop().trim()+".",m});
+const P=[
+p("Maa's Magic Tiffin Services","Dadar",I,["Dadar","Parel","Lower Parel","Matunga","Wadala"],110,"Medium","Large",H,"8:00–8:45 PM","Rotating home-style menu","Monthly / flexible",4.8,106,"Both",["Dinner"],"Strong local rating and coverage around Dadar, Parel, Lower Parel, Matunga and Wadala.",1),
+p("Yummy Tiffins","Andheri East",W,["Andheri East"],100,"Medium","Medium",H,"12:00–1:30 PM","Daily tiffin","Plan varies",4.6,382,"Both",L,0,1),
+p("Digitiffin","Andheri West",W,["Andheri West"],110,"Mild","Medium",H.concat(NL),"12:00–2:00 PM","Daily home food","Flexible",4.7,151,"Both",L,0,1),
+p("TiffinKart","Malad West",W,["Malad"],100,"Medium","Large",H,"12:00–2:00 PM","Daily tiffin","Plan varies",4.8,103,"Both",L),
+p("Aaicha Dabba","Worli",I,["Worli"],120,"Spicy","Large",H,"12:00–2:00 PM","Home-style meals","Plan varies",4.9,157,"Both",L,"Highly rated local provider in Worli."),
+p("My Tiffinz","Mulund West",E,["Mulund"],100,"Mild","Medium",["Jain"].concat(H),"11:30 AM–1:30 PM","Vegetarian tiffin","Plan varies",4.9,71,"Veg",L),
+p("Mauli Tiffin Service","Powai",E,["Powai"],110,"Medium","Large",H,"12:00–2:00 PM","Homemade food","Plan varies",4.9,143,"Both",L),
+p("Pranamyaa Tiffin & Catering","Byculla",I,["Byculla"],100,"Spicy","Medium",H,"12:00–2:00 PM","Tiffin & catering","Plan varies",4.9,66,"Both",L,"Highly rated central-Mumbai provider."),
+p("Patravali Foods","Kandivali East",W,["Kandivali"],100,"Medium","Large",H,"12:00–2:00 PM","Daily tiffin","Plan varies",4.6,189,"Both",L),
+p("Shreeji Tiffin & Catering","Vile Parle West",W,["Vile Parle"],120,"Medium","Large",H,"12:00–2:00 PM","Tiffin & catering","Plan varies",4.9,120,"Both",L),
+p("Good Home Food","Chandivali",E,["Chandivali"],100,"Mild","Medium",H.concat(NL),"12:00–2:00 PM","Home-style food","Flexible",4.8,100,"Both",L),
+p("Prince Tiffin Services","Shirgaon, Badlapur",T,["Badlapur"],200,"Medium","Medium",H,"Confirm with provider","Tiffin service","Confirm plan",4.9,130,"Both",L),
+p("Shri Tiffin Service","Katrap, Badlapur",T,["Badlapur"],200,"Medium","Medium",H,"Confirm with provider","Tiffin service","Confirm plan",5,28,"Both",L),
+p("Shri Swami Samarth Tiffin Services","Katrap, Badlapur",T,["Badlapur"],200,"Medium","Medium",H,"Confirm with provider","Tiffin service","Confirm plan",4.3,7,"Both",L),
+p("Runali's Kitchen","Katrap, Badlapur",T,["Badlapur"],200,"Medium","Medium",H,"Confirm with provider","Tiffin service","Confirm plan",5,11,"Both",L),
+p("Thepla House","Mumbai (multiple areas)",W,"*",150,"Mild","Medium",["Jain"].concat(NL,H),"Varies","Fresh Gujarati / Jain / vegan","No fixed dabba",4.5,300,"Veg",["Lunch","Dinner"])];
+P.forEach((x,i)=>x.id=i);
+const cov=(x,a)=>x.cov==="*"?regOf(a)===x.reg:x.cov.includes(a);
+let sp="Any spice",tg=[],cmp=[],hero="",today=(new Date().getDay()+6)%7;
+const fill=(el,a)=>{el.innerHTML=a.map(v=>"<option>"+v+"</option>").join("")};
+$("hero").innerHTML="<option value=''>Select your area</option>"+AR.flatMap((a,i)=>a.map(n=>"<option value='"+n+"'>"+n+" • "+RG[i]+"</option>")).join("");
+fill($("rg"),["All Mumbai regions"].concat(RG));
+function areas(){const r=$("rg").value,i=RG.indexOf(r);fill($("ar"),["All areas"].concat(i<0?AR.flat():AR[i]))}
+areas();
+["Any spice","Very mild","Mild","Medium","Spicy","Very spicy"].forEach(s=>{const b=document.createElement("button");b.className="chip";b.textContent=s;b.setAttribute("aria-pressed",s===sp);b.onclick=()=>{sp=s;[...$("sp").children].forEach(c=>c.setAttribute("aria-pressed",c.textContent===s));list()};$("sp").appendChild(b)});
+["No lock-in","Jain","High protein","Home-style"].forEach(t=>{const b=document.createElement("button");b.className="chip";b.textContent=t;b.setAttribute("aria-pressed","false");b.onclick=()=>{const i=tg.indexOf(t);i<0?tg.push(t):tg.splice(i,1);b.setAttribute("aria-pressed",i<0);list()};$("tg").appendChild(b)});
+function ok(x){const r=$("rg").value,a=$("ar").value,m=$("meal").value,f=$("food").value,b=+$("bud").value;
+if(r!=="All Mumbai regions"&&x.reg!==r)return 0;if(a!=="All areas"&&!cov(x,a))return 0;
+if(m==="Lunch"||m==="Dinner"){if(!x.meals.includes(m))return 0}else if(m==="Both"&&x.meals.length<2)return 0;
+if((f==="Non-vegetarian"||f==="Both")&&x.food!=="Both")return 0;
+if(b&&x.pr>b)return 0;if(sp!=="Any spice"&&x.sp!==sp)return 0;return tg.every(t=>x.tags.includes(t))}
+function list(){const r=P.filter(ok);$("cnt").textContent=r.length+(r.length===1?" match":" matches");$("cnt").classList.remove("pop");void $("cnt").offsetWidth;$("cnt").classList.add("pop");
+$("res").innerHTML=r.length?r.map(x=>{const mt=hero?cov(x,hero):x.m;return`<article class="card"><div class="top"><span class="bd">${mt?"MATCHED":"LOCAL"}</span><span class="rt">★ ${x.rt}<br><span class="mu sm" style="font-weight:400">${x.rv} reviews</span></span></div><h3>${x.n}</h3><div class="loc">📍 ${x.loc} · ${x.reg}</div><div class="pr">₹${x.pr} / meal</div><div class="tg"><span class="spc s-${x.sp.replace(/ /g,"")}">🌶️ ${x.sp}</span><span>🍱 ${x.po}</span>${x.tags.map(t=>`<span${t==="No lock-in"?' class="nl"':""}>${t}</span>`).join("")}</div><dl><div><dt>Delivery</dt><dd>${x.del}</dd></div><div><dt>Menu</dt><dd>${x.menu}</dd></div><div><dt>Plan</dt><dd>${x.plan}</dd></div></dl><div class="acts"><button class="btn" data-b="${x.id}">Book</button><button class="btn s" data-d="${x.id}">Details</button><button class="btn o${cmp.includes(x.id)?" on":""}" data-c="${x.id}">Compare</button></div>${x.noCustom?"":`<button class="btn o full" data-p="${x.id}">🍽️ Build your own plate</button>`}</article>`}).join(""):`<div class="card empty" style="grid-column:1/-1"><h3>No exact matches</h3><p class="mu">Try a nearby area or relax one filter. We don't pretend an unavailable service is available.</p><button class="btn s" id="rs">Reset filters</button></div>`}
+["rg","ar","meal","food","bud"].forEach(i=>$(i).onchange=()=>{if(i==="rg")areas();list()});
+function reset(){hero="";$("hero").value="";["rg","meal","food","bud"].forEach(i=>$(i).selectedIndex=0);areas();sp="Any spice";tg=[];[...$("sp").children].forEach(c=>c.setAttribute("aria-pressed",c.textContent===sp));[...$("tg").children].forEach(c=>c.setAttribute("aria-pressed","false"));list()}
+$("go").onclick=()=>{const a=$("hero").value;if(a){hero=a;$("rg").value=regOf(a);areas();$("ar").value=a}else hero="";list();$("find").scrollIntoView()};
+function tray(){$("tray").classList.toggle("on",cmp.length>0);$("trc").innerHTML=cmp.map(i=>"<span>"+P[i].n+"</span>").join("")}
+$("res").onclick=e=>{const t=e.target.closest("button");if(!t)return;
+if(t.id==="rs")reset();if(t.dataset.b)book(+t.dataset.b,1);if(t.dataset.d)det(+t.dataset.d,0,today,1);if(t.dataset.p)det(+t.dataset.p,0,today,1,1);
+if(t.dataset.c){const i=+t.dataset.c,k=cmp.indexOf(i);if(k>-1)cmp.splice(k,1);else if(cmp.length<3)cmp.push(i);else{alert("You can compare up to 3 tiffins.");return}t.classList.toggle("on",k<0);tray()}};
+const open=(h,keep)=>{const y=keep?$("md").scrollTop:0;$("md").innerHTML='<button class="x" aria-label="Close" onclick="shut()">✕</button>'+h;$("ov").classList.add("on");$("md").scrollTop=y};
+const shut=()=>$("ov").classList.remove("on");
+$("ov").onclick=e=>{if(e.target===$("ov"))shut()};document.onkeydown=e=>{if(e.key==="Escape")shut()};
+function compare(){if(!cmp.length){open('<p class="ey">Side-by-side</p><h3 style="font-size:1.4rem">Compare your shortlist</h3><p class="mu">Nothing selected yet. Tap “Compare” on up to 3 tiffins.</p>');return}
+const s=cmp.map(i=>P[i]),R=[["Price / meal",x=>"₹"+x.pr],["Rating",x=>`★ ${x.rt} (${x.rv})`],["🌶️ Spice",x=>x.sp],["Portion",x=>x.po],["Delivery",x=>x.del],["Food",x=>x.food==="Veg"?"Vegetarian":"Both"],["Menu",x=>x.menu],["Plan",x=>x.plan],["Best for",x=>x.best]];
+open(`<p class="ey">Side-by-side</p><h3 style="font-size:1.4rem">Compare your shortlist</h3><div class="tw"><table><thead><tr><th>Factor</th>${s.map(x=>"<th>"+x.n+"</th>").join("")}</tr></thead>${R.map(r=>"<tr><td><b>"+r[0]+"</b></td>"+s.map(x=>"<td>"+r[1](x)+"</td>").join("")+"</tr>").join("")}</table></div><p class="mu sm">Tip: use the comparison to shortlist, then use <b>Try a trial meal</b> before a longer commitment.</p><button class="btn" id="try">Try ${s[0].n}</button>`);
+$("try").onclick=()=>book(s[0].id,1)}
+$("cn").onclick=compare;$("navC").onclick=compare;
+/* ===== Custom plate: shared item catalogue (price is scaled from each provider's meal price; override per provider with x.ip = {itemId: price}; hide with x.noCustom = true) ===== */
+const ST={g(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}},s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const GR=["Rotis & rice","Dal","Sabzi","Non-veg","Extras","Sweet"];
+const IT=[["roti","Roti",8,8,0],["phulka","Phulka",7,8,0],["thepla","Thepla",15,4,0],["jrice","Jeera rice (bowl)",30,2,0],["rice","Plain rice (bowl)",25,2,0],
+["mdal","Moong dal",30,2,1],["tdal","Dal tadka",35,2,1],["dmak","Dal makhani",45,2,1],
+["agobi","Aloo gobi",40,2,2],["cab","Cabbage sabzi",35,2,2],["chole","Chole",45,2,2],["rajma","Rajma",45,2,2],["soya","Soya matar curry",45,2,2],["pbhur","Paneer bhurji",65,2,2],
+["eggc","Egg curry",55,2,3],["chk","Chicken curry",85,2,3],
+["dahi","Dahi",15,2,4],["raita","Raita",20,2,4],["sal","Salad",15,2,4],["pap","Papad",8,3,4],
+["gj","Gulab jamun (1 pc)",15,4,5],["kh","Kheer (bowl)",30,2,5],["hal","Suji halwa",25,2,5]];
+const av=x=>IT.filter(i=>i[4]!==3||x.food==="Both");
+const ip=(x,i)=>x.ip&&x.ip[i[0]]!=null?x.ip[i[0]]:Math.round(i[2]*(x.pr+110)/220);
+const pp=(x,q)=>av(x).reduce((t,i)=>t+(q[i[0]]||0)*ip(x,i),0);
+const pt=(x,q)=>av(x).filter(i=>q[i[0]]).map(i=>(q[i[0]]>1?q[i[0]]+"× ":"")+i[1]);
+let SV=ST.g("tp_plates",[]),WK=ST.g("tp_week",{}),PQ={},FL="";
+
+/* m: 0 = provider's menu, 1 = build my plate, 2 = plan my week */
+function det(id,pl,d,k,m,keep){const x=P[id];m=x.noCustom?0:(m||0);
+const M=PL[pl],nv=M.nv.includes(d),q=PQ[id]=PQ[id]||{},mine=SV.filter(s=>s.pid===id),wk=WK[id]=WK[id]||D.map(()=>"menu");
+wk.forEach((v,j)=>{if(v!=="menu"&&v!=="skip"&&!mine.some(s=>s.id===v))wk[j]="menu"});
+const dayc=(v,b)=>v==="skip"?0:v==="menu"?x.pr+b:pp(x,mine.find(s=>s.id===v).q)+b,wkT=i=>wk.reduce((t,v)=>t+dayc(v,PK[i][2]),0);
+let body="",foot="",lab="Per meal total";
+if(m===0){body=`<label class="fl">Weekly menu</label><div class="days">${PL.map((n,i)=>`<button class="chip" data-pl="${i}" aria-pressed="${i===pl}">${n.n}</button>`).join("")}</div><div class="days">${D.map((n,j)=>`<button class="chip" data-dy="${j}" aria-pressed="${j===d}">${n.slice(0,3)}</button>`).join("")}</div>
+<div class="menu${nv?" nv":""}"><b>${D[d]}${d===today?" (today)":""}</b> <span class="mu sm">${nv?"Non-veg":"Veg"}</span><ul>${M.m[d].map(i=>"<li>"+i+"</li>").join("")}</ul></div>`;
+foot=`<button class="btn" id="bk">Book trial meal</button>`}
+else if(m===1){lab="Plate total (with box)";
+body=(FL?`<div class="note" role="status">${FL}</div>`:"")+`<p class="mu sm" style="margin:12px 0 0">Build your own plate from ${esc(x.n)}'s items. Order it today, or save it and use it in your weekly plan.</p>`+GR.map((g,gi)=>{const its=av(x).filter(i=>i[4]===gi);return its.length?`<div class="grp"><b>${g}</b>`+its.map(i=>`<div class="it"><span class="n">${i[1]}<small>₹${ip(x,i)} each</small></span><span class="st"><button type="button" data-st="${i[0]}" data-dt="-1" aria-label="Remove one ${i[1]}">−</button><span id="q_${i[0]}">${q[i[0]]||0}</span><button type="button" data-st="${i[0]}" data-dt="1" aria-label="Add one ${i[1]}">+</button></span></div>`).join("")+`</div>`:""}).join("")
++`<div class="note" id="ps"></div><label class="fl">Name this plate (to save it)</label><input id="pn" maxlength="30" placeholder="e.g. Gym day plate">`
++(mine.length?`<label class="fl">Your saved plates</label>`+mine.map(v=>`<div class="sv"><span class="n"><b>${esc(v.name)}</b><small>${esc(pt(x,v.q).join(", "))} · ₹${pp(x,v.q)}</small></span><button class="btn s" type="button" data-ld="${v.id}">Use</button><button class="btn o" type="button" data-rm="${v.id}" aria-label="Delete ${esc(v.name)}">✕</button></div>`).join(""):"");
+foot=`<div class="row"><button class="btn" id="po">Order for today</button><button class="btn s" id="pv">Save this plate</button></div>`}
+else{lab="Weekly total (with box)";
+body=`<p class="mu sm" style="margin:12px 0 0">For each day, pick the provider's menu, one of your saved plates, or skip the day.</p>`+(mine.length?"":`<div class="note">No saved plates yet. Open “Build my plate”, add items and tap Save. Then you can pick it here for any day.</div>`)
++D.map((n,j)=>{const o=(v,t)=>`<option value="${v}"${wk[j]===v?" selected":""}>${t}</option>`;return`<div class="wk"><b>${n.slice(0,3)}</b><select data-wd="${j}" aria-label="${n}">${o("menu","Provider's menu")}${mine.map(v=>o(v.id,"My plate: "+esc(v.name))).join("")}${o("skip","Skip this day")}</select></div>`}).join("");
+foot=`<button class="btn" id="wb">Request weekly plan</button>`}
+FL="";
+open(`<h3 style="font-size:1.4rem">${x.n}</h3><div class="loc">📍 ${x.loc} · ${x.reg} · ★ ${x.rt} (${x.rv})</div><dl><div><dt>Price</dt><dd>₹${x.pr} / meal</dd></div><div><dt>Delivery</dt><dd>${x.del}</dd></div><div><dt>Plan</dt><dd>${x.plan}</dd></div></dl>
+${x.noCustom?"":`<div class="days" role="tablist">${["Provider's menu","Build my plate","Plan my week"].map((n,i)=>`<button class="chip" role="tab" data-m="${i}" aria-pressed="${i===m}">${n}</button>`).join("")}</div>`}
+${body}
+<label class="fl">Choose your tiffin box</label>${PK.map((b,i)=>`<label class="opt"><input type="radio" name="pk" value="${i}"${i===k?" checked":""}><span class="n">${b[0]}<small>${b[1]}</small></span><b>${b[2]?"+₹"+b[2]:"Included"}</b></label>`).join("")}
+<div class="tot"><span>${lab}</span><b id="tt"></b></div>${foot}`,keep);
+const md=$("md"),on=(i,f)=>{const e=$(i);if(e)e.onclick=f};
+const up=()=>{const i=+md.querySelector("input[name=pk]:checked").value,c=m===1?pp(x,q):0;
+$("tt").textContent=m===1?(c?"₹"+(c+PK[i][2]):"Add items"):"₹"+(m===2?wkT(i):x.pr+PK[i][2]);
+if(m===1){const l=pt(x,q);$("ps").innerHTML=l.length?"<b>Your plate</b><br>"+esc(l.join(", "))+" · <b>₹"+c+"</b> food":"Your plate is empty. Tap + on any item to add it."}return i};up();
+md.querySelectorAll("input[name=pk]").forEach(r=>r.onchange=up);
+md.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>det(id,pl,d,up(),+b.dataset.m,1));
+md.querySelectorAll("[data-pl]").forEach(b=>b.onclick=()=>det(id,+b.dataset.pl,d,up(),0,1));
+md.querySelectorAll("[data-dy]").forEach(b=>b.onclick=()=>det(id,pl,+b.dataset.dy,up(),0,1));
+md.querySelectorAll("[data-st]").forEach(b=>b.onclick=()=>{const key=b.dataset.st,it=IT.find(i=>i[0]===key),n=Math.max(0,Math.min(it[3],(q[key]||0)+ +b.dataset.dt));n?q[key]=n:delete q[key];$("q_"+key).textContent=n;up()});
+md.querySelectorAll("[data-ld]").forEach(b=>b.onclick=()=>{const v=SV.find(s=>s.id===b.dataset.ld);PQ[id]={...v.q};det(id,pl,d,up(),1,1);$("pn").value=v.name});
+md.querySelectorAll("[data-rm]").forEach(b=>b.onclick=()=>{SV=SV.filter(s=>s.id!==b.dataset.rm);ST.s("tp_plates",SV);det(id,pl,d,up(),1,1)});
+md.querySelectorAll("[data-wd]").forEach(s=>s.onchange=()=>{wk[+s.dataset.wd]=s.value;ST.s("tp_week",WK);up()});
+on("bk",()=>book(id,up()));
+on("pv",()=>{const n=$("pn").value.trim();if(!pp(x,q)){alert("Add at least one item to your plate first.");return}if(!n){alert("Give your plate a name so you can pick it later.");$("pn").focus();return}
+const ex=SV.find(s=>s.pid===id&&s.name.toLowerCase()===n.toLowerCase());if(ex)ex.q={...q};else SV.push({id:"s"+Date.now().toString(36),pid:id,name:n,q:{...q}});
+ST.s("tp_plates",SV);FL="Saved “"+esc(n)+"”. Pick it for any day in “Plan my week”.";det(id,pl,d,up(),1,1)});
+on("po",()=>{const l=pt(x,q);if(!l.length){alert("Add at least one item to your plate first.");return}const f=pp(x,q);book(id,up(),{type:"plate",name:$("pn").value.trim(),lines:l,cost:b=>f+PK[b][2]})});
+on("wb",()=>{if(wk.every(v=>v==="skip")){alert("Choose at least one day for your plan.");return}
+book(id,up(),{type:"week",lines:D.map((n,j)=>n.slice(0,3)+": "+(wk[j]==="menu"?"Provider's menu":wk[j]==="skip"?"Skipped":"My plate: "+mine.find(s=>s.id===wk[j]).name)),cost:wkT})})}
+function book(id,k,ex){const x=P[id],dt=new Date(Date.now()+864e5).toISOString().slice(0,10);
+open(`<p class="ey">Book selected service</p><h3 style="font-size:1.4rem">${x.n}</h3><p class="mu" id="sum"></p>
+${ex?`<div class="note"><b>${ex.type==="week"?"Your weekly plan":"Your custom plate"}${ex.name?": "+esc(ex.name):""}</b><br>${ex.type==="week"?ex.lines.map(esc).join("<br>"):esc(ex.lines.join(", "))}</div>`:""}
+<label class="fl">Your name</label><input id="bn" placeholder="Enter your name"><label class="fl">Mobile number</label><input id="bp" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number"><label class="fl">Delivery area / landmark</label><input id="bl" placeholder="e.g. College, PG or building">
+<label class="fl">Meal</label><select id="bm">${x.meals.map(m=>"<option>"+m+"</option>").join("")}</select><label class="fl">Order type</label><select>${ex?"<option>"+(ex.type==="week"?"Weekly (my plan)":"One day (custom plate)")+"</option>":"<option>1-day trial</option><option>Weekly</option><option>Monthly</option>"}</select>
+<label class="fl">Tiffin box</label><select id="bx">${PK.map((b,i)=>`<option value="${i}"${i===k?" selected":""}>${b[0]} (${b[2]?"+₹"+b[2]:"included"})</option>`).join("")}</select><label class="fl">${ex&&ex.type==="week"?"Start date":"Preferred date"}</label><input type="date" id="bd" value="${dt}">
+<div class="note"><b>Provider contact</b><br>Number not publicly verified in this prototype. Your booking request can be treated as an enquiry.</div><button class="btn full" id="bs" style="width:100%">Submit booking request</button>`);
+const sm=()=>{const b=+$("bx").value;$("sum").textContent=x.loc.split(",").pop().trim()+" · ₹"+(ex?ex.cost(b):x.pr+PK[b][2])+(ex?(ex.type==="week"?" indicative / week":" indicative for this plate"):" indicative / meal")};sm();$("bx").onchange=sm;
+$("bs").onclick=()=>{if(!$("bn").value.trim()||!/^\d{10}$/.test($("bp").value)){alert("Add your name and a 10-digit mobile number.");return}
+$("md").innerHTML='<button class="x" aria-label="Close" onclick="shut()">✕</button><div class="empty"><div style="font-size:2.4rem">🍱</div><h3>Booking request sent</h3><p class="mu">'+x.n+' will confirm your '+$("bm").value.toLowerCase()+(ex?(ex.type==="week"?" weekly plan":" custom plate"):" trial")+'. No lock-in. This is a prototype, so no real order is placed.</p><button class="btn" onclick="shut()">Done</button></div>'}}
+list();
+
+/* ===== Lively extras ===== */
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+$("sur").onclick=()=>{const x=P[Math.floor(Math.random()*P.length)];det(x.id,0,today,1)};
+if(!reduce){
+const hr=document.querySelector(".hero");["🍛","🌶️","🥘","🍚","🫓","🥗","🍋"].forEach((e,i)=>{const s=document.createElement("span");s.className="fe";s.textContent=e;s.setAttribute("aria-hidden","true");s.style.cssText=`left:${(i*13+3)%86}%;top:${[6,70,20,84,48,10,60][i]}%;animation-delay:${-i*1.3}s;font-size:${1.6+i%3*.5}rem`;hr.appendChild(s)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".how .card,.fh,.fb").forEach(el=>{el.classList.add("rv");io.observe(el)});
+if(matchMedia("(hover:hover)").matches){const sel=".grid .card,.hero .box";
+document.addEventListener("pointermove",e=>{const c=e.target.closest(sel);if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty("--rx",(-((e.clientY-r.top)/r.height-.5)*6)+"deg");c.style.setProperty("--ry",(((e.clientX-r.left)/r.width-.5)*6)+"deg")});
+document.addEventListener("pointerout",e=>{const c=e.target.closest&&e.target.closest(sel);if(c&&!c.contains(e.relatedTarget)){c.style.setProperty("--rx","0deg");c.style.setProperty("--ry","0deg")}})}
+}
+const nv=document.querySelector("nav");addEventListener("scroll",()=>{const h=document.documentElement;nv.style.setProperty("--p",h.scrollTop/((h.scrollHeight-h.clientHeight)||1))},{passive:true});
+document.addEventListener("pointerdown",e=>{const b=e.target.closest(".btn");if(!b)return;const r=b.getBoundingClientRect(),d=Math.max(r.width,r.height)*2,s=document.createElement("i");s.className="rp";s.style.cssText=`width:${d}px;height:${d}px;left:${e.clientX-r.left-d/2}px;top:${e.clientY-r.top-d/2}px`;b.appendChild(s);setTimeout(()=>s.remove(),600)});
+function boom(){const c=document.createElement("canvas");c.style.cssText="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50";c.width=innerWidth;c.height=innerHeight;document.body.appendChild(c);const g=c.getContext("2d"),cl=["#ff6b35","#f7b32b","#e63e6d","#2f9e44","#7048e8"],ps=Array.from({length:130},()=>({x:c.width/2,y:c.height*.55,vx:(Math.random()-.5)*15,vy:-Math.random()*15-4,s:6+Math.random()*6,r:Math.random()*6,vr:(Math.random()-.5)*.4,c:cl[Math.random()*5|0]}));let f=0;(function t(){g.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;g.save();g.translate(p.x,p.y);g.rotate(p.r);g.fillStyle=p.c;g.fillRect(-p.s/2,-p.s/3,p.s,p.s/1.6);g.restore()});++f<130?requestAnimationFrame(t):c.remove()})()}
+new MutationObserver(()=>{const m=$("md"),w=m.textContent.includes("Booking request sent");if(w&&!m.dataset.done){m.dataset.done=1;if(!reduce)boom()}else if(!w)delete m.dataset.done}).observe($("md"),{childList:true,subtree:true});
+</script>
+</body>
+</html>
